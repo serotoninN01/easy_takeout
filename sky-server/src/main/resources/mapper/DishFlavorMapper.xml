@@ -6,7 +6,6 @@
         insert into dish_flavor (dish_id, name, value) values
         <foreach collection="flavors" item="df" separator=",">
              (#{df.dishId},#{df.name},#{df.value})
-
         </foreach>
     </insert>
 
@@ -16,6 +15,10 @@
         <foreach collection="dishIds" open="(" close=")" separator="," item="dishId">
             #{dishId}
         </foreach>
+    </delete>
+
+    <delete id="deleteByDishId">
+        delete from dish_flavor where dish_id = #{dishId}
     </delete>
 
 </mapper>

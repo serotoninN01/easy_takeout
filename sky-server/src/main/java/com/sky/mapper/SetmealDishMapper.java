@@ -1,5 +1,9 @@
 package com.sky.mapper;
 
+import com.github.pagehelper.Page;
+import com.sky.dto.SetmealPageQueryDTO;
+import com.sky.entity.SetmealDish;
+import com.sky.vo.SetmealVO;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
@@ -8,6 +12,9 @@ import java.util.List;
 public interface SetmealDishMapper {
 
     List<Long> getSetmealIdsByDishIds(List<Long> dishIds);
+
+
+    void insertBatch(List<SetmealDish> setmealDishes);
 
 
 }
