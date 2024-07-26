@@ -6,6 +6,11 @@ sky:
     database: sky_take_out
     username: root
     password: 1999csysh
+  redis:
+    host: localhost
+    port: 6379
+    #password: 123456
+    database: 0
 
   minio:
     endpoint: http://127.0.0.1:9000
