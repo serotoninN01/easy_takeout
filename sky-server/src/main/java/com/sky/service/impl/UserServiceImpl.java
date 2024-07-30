@@ -45,9 +45,7 @@ public class UserServiceImpl implements UserService {
                     .createTime(LocalDateTime.now())
                     .build();
         }
-
         userMapper.insert(user);
-
         return user;
 
 
@@ -60,10 +58,8 @@ public class UserServiceImpl implements UserService {
         map.put("js_code",code);
         map.put("grant_type", "authorization_code");
         String json = HttpClientUtil.doGet(WX_LOGIN, map);
-
         JSONObject jsonObject = JSON.parseObject(json);
         String openid = jsonObject.getString("openid");
-        
         return openid;
     }
 }
