@@ -7,6 +7,7 @@ import java.util.List;
 
 public interface ShoppingCartService {
 
+    void cleanShoppingCart();
     void addShoppingCart(ShoppingCartDTO shoppingCartDTO);
 
     List<ShoppingCart> showShoppingCart();
