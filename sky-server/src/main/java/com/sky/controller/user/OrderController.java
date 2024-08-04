@@ -30,9 +30,9 @@ public class OrderController {
 
     @PutMapping("/payment")
     @ApiOperation("订单支付")
-    public Result<OrderPaymentVO> payment(@RequestBody OrdersPaymentDTO ordersPaymentDTO) throws Exception {
-        OrderPaymentVO orderPaymentVO = orderService.payment(ordersPaymentDTO);
-        return Result.success(orderPaymentVO);
+    public Result payment(@RequestBody OrdersPaymentDTO ordersPaymentDTO) throws Exception {
+        orderService.payment(ordersPaymentDTO);
+        return Result.success();
     }
 
 }
